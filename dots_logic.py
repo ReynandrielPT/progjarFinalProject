@@ -1,6 +1,7 @@
 import json
 import logging
 import time
+import random
 
 DOTS = 6
 COUNTDOWN_SECONDS = 5
@@ -13,7 +14,7 @@ class DotsAndBoxesLogic:
         self.lines = []
         self.boxes = []
         self.winner = None
-        self.current_turn = 1
+        self.current_turn = random.choice([1, 2])
         self.game_state = "LOBBY"
         self.countdown_start_time = None
         self.paused_by = None
@@ -26,7 +27,7 @@ class DotsAndBoxesLogic:
         self.lines = []
         self.boxes = []
         self.winner = None
-        self.current_turn = 1
+        self.current_turn = random.choice([1, 2])
         self.game_state = "LOBBY"
         self.countdown_start_time = None
         self.paused_by = None
@@ -128,7 +129,7 @@ class DotsAndBoxesLogic:
     def update(self):
         if self.game_state == "LOBBY" and len(self.players) == 2 and all(self.player_ready.values()):
             self.game_state = "STARTING"
-            self.current_turn = 1
+            self.current_turn = random.choice([1, 2])
             self.winner = None
             self.countdown_start_time = time.time()
         if self.game_state == "STARTING" and self.countdown_start_time:
