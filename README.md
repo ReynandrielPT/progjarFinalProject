@@ -57,3 +57,16 @@ Project ini adalah implementasi permainan **Dots and Boxes** untuk dua pemain se
 | `dots_logic.py`              | Logika permainan Dots and Boxes                                              |
 
 ---
+
+## Menjalankan program
+**Server**
+
+Keseluruhan server dapat dijalankan dalam terminal environment Jupyter.
+* Pertama, jalankan load balancer dengan perintah python load_balancer.py atau python3 load_balancer.py.
+* Kedua, jalankan server HTTP pertama dengan perintah python server_thread_pool_http.py 8001 atau python3 server_thread_pool_http.py 8001.
+* Ketiga, jalankan server HTTP kedua dengan perintah python server_thread_pool_http.py 8002 atau python3 server_thread_pool_http.py 8002.
+* Keempat, jalankan server game state dengan perintah python game_state_server.py atau python3 game_state_server.py.
+
+**Client**
+
+Client hanya dapat dijalan dalam lxterminal environment noVNC. Perintah yang digunakan adalah python client.py atau python3 client.py.
