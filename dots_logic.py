@@ -14,7 +14,7 @@ class DotsAndBoxesLogic:
         self.lines = []
         self.boxes = []
         self.winner = None
-        self.current_turn = random.choice([1, 2])
+        self.current_turn = None
         self.game_state = "LOBBY"
         self.countdown_start_time = None
         self.paused_by = None
@@ -27,7 +27,7 @@ class DotsAndBoxesLogic:
         self.lines = []
         self.boxes = []
         self.winner = None
-        self.current_turn = random.choice([1, 2])
+        self.current_turn = None
         self.game_state = "LOBBY"
         self.countdown_start_time = None
         self.paused_by = None
